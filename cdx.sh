@@ -48,7 +48,7 @@ __cdswd() {
             gs=`cd $d; git branch --show-current 2>/dev/null`; [ -n "$gs" ] \
                 && printf "$gs\n"; \
             echo; ls -l --color $d'  \
-        --header $'Γץ▒ Enter (cd selection) Γץ▒ (W)rite selection to command line \n\n'
+        --header $'/ Enter (cd selection) / (W)rite selection to command line \n\n'
 }
 
 # Function to handle selection in the fuzzy search for stored directories
