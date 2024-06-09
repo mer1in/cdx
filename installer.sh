@@ -8,23 +8,23 @@ set -e
 SCRIPT_URL="https://raw.githubusercontent.com/mer1in/cdx/main/cdx.sh"
 
 # Define the location where the script will be installed
-INSTALL_DIR="$HOME/.cdx"
+INSTALL_PATH="$HOME/.cdx"
 
 # Fetch the script and save it to the install directory
 echo "Downloading cdx script..."
-curl -fsSL "$SCRIPT_URL" -o "$INSTALL_DIR"
+curl -fsSL "$SCRIPT_URL" -o "$INSTALL_PATH"
 
 # Add execution permission to the script
-chmod +x "$INSTALL_DIR"
+chmod +x "$INSTALL_PATH"
 
 # Check if the script is already sourced in ~/.bashrc
-if grep -q "$INSTALL_DIR" "$HOME/.bashrc"; then
+if grep -q "$INSTALL_PATH" "$HOME/.bashrc"; then
     # Remove old source line
-    sed -i "/$INSTALL_DIR/d" "$HOME/.bashrc"
+    sed -i "/$INSTALL_PATH/d" "$HOME/.bashrc"
 fi
 
 # Add new source line
-echo "source $INSTALL_DIR" >> "$HOME/.bashrc"
+echo "source $INSTALL_PATH" >> "$HOME/.bashrc"
 echo "cdx has been successfully installed or upgraded."
 
 # Inform the user about successful installation
