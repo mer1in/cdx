@@ -20,7 +20,8 @@ chmod +x "$INSTALL_PATH"
 # Check if the script is already sourced in ~/.bashrc
 if grep -q "$INSTALL_PATH" "$HOME/.bashrc"; then
     # Remove old source line
-    sed -i "/$INSTALL_PATH/d" "$HOME/.bashrc"
+    cat $HOME/.bashrc > $HOME/.bashrc.bak
+    cat $HOME/.bashrc.bak | sed -e "/$INSTALL_PATH/d" > $HOME/.bashrc
 fi
 
 # Add new source line
