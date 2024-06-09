@@ -13,7 +13,8 @@ cdx simplifies navigation in the terminal by providing shortcuts, project root d
 
 ## Requirements
 
-cdx requires `fzf` (a command-line fuzzy finder) to be installed. You can find the installation instructions for `fzf` here: [fzf Installation](https://github.com/junegunn/fzf#installation).
+- cdx requires `fzf` (a command-line fuzzy finder) to be installed. You can find the installation instructions for `fzf` here: [fzf Installation](https://github.com/junegunn/fzf#installation).
+- Bash version 5 or greater.
 
 ## Installation
 
